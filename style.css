@@ -102,7 +102,10 @@ p {
 }
 
 .flip {
-	animation: cardFlip 0s;
+	animation-name: cardFlip;
+	animation-duration: 50ms;
+	animation-timing-function: ease;
+	animation-delay: 0s;
 }
 
 .bottom {

@@ -5,46 +5,69 @@ const minuteBox = document.querySelector(".top-minute");
 const numMinute = document.querySelector(".num-min");
 
 const hourBox = document.querySelector(".top-hour");
-const numHour = document.querySelector(".num-hour");
+const numHour = document.querySelector(".num-hrs");
 
 const dayBox = document.querySelector(".top-day");
-const numDay = document.querySelector("num-day");
+const numDay = document.querySelector(".num-day");
 
-const number = document.querySelector(".seconds");
+let seconds = 60;
 
-let seconds = 1;
+let minutes = 7;
 
-let minutes = 0;
+let hours = 24;
 
-let hours = 0;
+let days = 10;
 
-let days = 0;
+const displayNum = () => {
+	numSecond.textContent = seconds;
+	numMinute.textContent = minutes;
+	numHour.textContent = hours;
+	numDay.textContent = days;
+};
 
-setInterval(() => {
+const run = setInterval(() => {
 	setTimeout(() => {
 		numSecond.textContent = seconds;
-		seconds++;
 		secondBox.classList.add("flip");
-		if (seconds >= 60) seconds = 0;
+		seconds--;
 	}, 50);
-	secondBox.classList.remove("flip");
-}, 1000);
 
-setInterval(() => {
-	setTimeout(() => {
-		minutes++;
+	if (seconds < 0) {
+		seconds = 60;
+		minutes--;
+		numSecond.textContent = seconds;
 		numMinute.textContent = minutes;
 		minuteBox.classList.add("flip");
-		if (minutes >= 60) minutes = 0;
-	}, 50);
-	minuteBox.classList.remove("flip");
-}, 60000);
+	}
 
-setInterval(() => {
-	setTimeout(() => {
-		hours++;
-		hourBox.classList.add("flip");
+	if (minutes < 0) {
+		minutes = 60;
+		hours--;
+		numMinute.textContent = minutes;
 		numHour.textContent = hours;
-	}, 50);
+		hourBox.classList.add("flip");
+	}
+
+	if (hours < 0) {
+		hours = 24;
+		days--;
+		numHour.textContent = hours;
+		numDay.textContent = days;
+		dayBox.classList.add("flip");
+	}
+
+	if (days < 0) {
+		days = 0;
+	}
+
+	if (seconds === 0 && hours === 0 && minutes === 0 && days === 0) {
+		clearInterval(run);
+	}
+
+	secondBox.classList.remove("flip");
+	minuteBox.classList.remove("flip");
 	hourBox.classList.remove("flip");
-}, 600000);
+	dayBox.classList.remove("flip");
+}, 100);
+
+displayNum();
