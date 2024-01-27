@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Manrope:wght@600;800&family=Poppins:ital@1&family=Red+Hat+Text:wght@700&display=swap");
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Red Hat Text", sans-serif;
+	font-size: inherit;
+}
+
+body {
+	display: grid;
+	min-height: 100svh;
+	place-items: center;
+}
+
+img {
+	display: block;
+	width: auto;
+	height: auto;
+}
+
+:root {
+	/* Primary */
+	--Grayish-blue: hsl(237, 18%, 59%);
+	--Soft-red: hsl(345, 95%, 68%);
+
+	/* Netural */
+	--White: hsl(0, 0%, 100%);
+	--Dark-desaturated-blue: hsl(236, 21%, 26%);
+	--Very-dark-blue: hsl(235, 16%, 14%);
+	--Very-dark-blue: hsl(234, 17%, 12%);
+}
+
+main {
+	border: 2px solid black;
+}
+
+header {
+	text-transform: uppercase;
+}
+
+p {
+	font-size: 0.6rem;
+	letter-spacing: 3px;
+}
+
+.boxes-container {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	border: 1px solid lime;
+}
+
+.boxes {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.box {
+	isolation: isolate;
+	display: grid;
+	gap: 3px;
+	border-radius: 0.25rem;
+	background-color: hsl(236, 21%, 31%);
+	cursor: pointer;
+	margin-bottom: 1rem;
+	overflow: hidden;
+	position: relative;
+	height: 100px;
+	width: 100px;
+	aspect-ratio: 1 / 1;
+	box-shadow: 0px 8px 3px -1px rgba(0, 0, 0, 0.85);
+}
+
+.top,
+.bottom {
+	width: 100%;
+}
+
+.top {
+	height: 49.5%;
+	z-index: 1;
+	transform-origin: center bottom;
+	border-top-right-radius: 0.25rem;
+	border-top-left-radius: 0.25rem;
+	background-color: hsl(235, 22%, 20%);
+	opacity: 0.4;
+	transition: 200ms;
+	box-shadow: 0px 4px 2px -4px black;
+}
+
+.box:hover .top {
+	transform: scaleY(-1.1);
+}
+
+.bottom {
+	height: 47.5%;
+	position: absolute;
+	bottom: 0;
+	border-bottom-left-radius: 0.25rem;
+	border-bottom-right-radius: 0.25rem;
+	background-color: inherit;
+}
+
+.dots {
+	z-index: 5;
+	position: absolute;
+	background-color: var(--Very-dark-blue);
+	height: 7px;
+	width: 7px;
+	border-radius: 50%;
+}
+
+.dot1 {
+	bottom: 50%;
+	left: -0.19rem;
+	transform: translateY(50%);
+}
+
+.dot2 {
+	bottom: 50%;
+	right: -0.19rem;
+	transform: translateY(50%);
+}
+
+.number {
+	position: absolute;
+	font-size: 4rem;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	color: var(--Soft-red);
+}
