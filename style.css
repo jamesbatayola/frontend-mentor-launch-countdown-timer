@@ -71,8 +71,8 @@ p {
 	overflow: hidden;
 	position: relative;
 	height: 100px;
-	width: 100px;
-	aspect-ratio: 1 / 1;
+	width: 110px;
+
 	box-shadow: 0px 8px 3px -1px rgba(0, 0, 0, 0.85);
 }
 
@@ -81,37 +81,47 @@ p {
 	width: 100%;
 }
 
+@keyframes cardFlip {
+	from {
+		transform: scaleY(2);
+	}
+	to {
+		transform: scaleY(-1.1);
+	}
+}
+
 .top {
-	height: 49.5%;
 	z-index: 1;
+	opacity: 0.5;
+	height: 49.5%;
 	transform-origin: center bottom;
 	border-top-right-radius: 0.25rem;
 	border-top-left-radius: 0.25rem;
-	background-color: hsl(235, 22%, 20%);
-	opacity: 0.4;
-	transition: 200ms;
 	box-shadow: 0px 4px 2px -4px black;
+	background-color: hsl(235, 22%, 20%);
 }
 
-.box:hover .top {
-	transform: scaleY(-1.1);
+.flip {
+	animation: cardFlip 0s;
 }
 
 .bottom {
-	height: 47.5%;
+	height: 48%;
 	position: absolute;
 	bottom: 0;
 	border-bottom-left-radius: 0.25rem;
 	border-bottom-right-radius: 0.25rem;
 	background-color: inherit;
+	box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.05);
 }
 
 .dots {
 	z-index: 5;
 	position: absolute;
 	background-color: var(--Very-dark-blue);
-	height: 7px;
-	width: 7px;
+	height: 8px;
+	width: 8px;
+	aspect-ratio: 1 / 1;
 	border-radius: 50%;
 }
 
@@ -129,9 +139,9 @@ p {
 
 .number {
 	position: absolute;
-	font-size: 4rem;
+	font-size: 3.5rem;
 	top: 50%;
-	left: 50%;
+	left: 52%;
 	transform: translateX(-50%) translateY(-50%);
 	color: var(--Soft-red);
 }
