@@ -58,11 +58,13 @@ img {
 	width: 370%;
 	height: 30%;
 	transform: translateX(-59%);
+	background-repeat: no-repeat;
+	object-fit: fill;
 }
 
 main {
 	display: grid;
-	width: 50%;
+	width: 70%;
 	max-width: 700px;
 	gap: 4rem;
 	min-width: 340px;
