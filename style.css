@@ -16,6 +16,8 @@ body {
 	place-items: center;
 	background: linear-gradient(var(--Very-very-dark-blue), var(--purply));
 	background-repeat: no-repeat;
+	border: 3px solid lime;
+	position: relative;
 }
 
 img {
@@ -41,16 +43,20 @@ img {
 }
 
 .background {
+	width: 100%;
+	height: 100%;
 	overflow-x: hidden;
 	position: relative;
 	position: absolute;
-	width: 100%;
-	height: auto;
+	border: 3px solid orange;
+	top: 0;
+	left: 0;
 	background-repeat: no-repeat;
-	mask-repeat: no-repeat;
 }
 
 .stars {
+	position: absolute;
+	top: 0;
 	background-repeat: no-repeat;
 	height: 100svh;
 	z-index: -1;
@@ -77,6 +83,7 @@ main {
 	gap: 4rem;
 	min-width: 340px;
 	transform: translateY(-60%);
+	border: 2px solid yellow;
 }
 
 header {
