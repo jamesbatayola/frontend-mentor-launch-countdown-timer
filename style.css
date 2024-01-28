@@ -19,11 +19,11 @@ body {
 	position: relative;
 }
 
-img {
+/* img {
 	display: block;
 	width: auto;
 	height: auto;
-}
+} */
 
 :root {
 	/* Primary */
@@ -50,6 +50,7 @@ img {
 	top: 0;
 	left: 0;
 	background-repeat: no-repeat;
+	pointer-events: none;
 }
 
 .stars {
