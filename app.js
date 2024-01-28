@@ -68,6 +68,6 @@ const run = setInterval(() => {
 	minuteBox.classList.remove("flip");
 	hourBox.classList.remove("flip");
 	dayBox.classList.remove("flip");
-}, 100);
+}, 1000);
 
 displayNum();
