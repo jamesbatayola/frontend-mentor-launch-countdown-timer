@@ -16,7 +16,6 @@ body {
 	place-items: center;
 	background: linear-gradient(var(--Very-very-dark-blue), var(--purply));
 	background-repeat: no-repeat;
-	border: 3px solid lime;
 	position: relative;
 }
 
@@ -48,7 +47,6 @@ img {
 	overflow-x: hidden;
 	position: relative;
 	position: absolute;
-	border: 3px solid orange;
 	top: 0;
 	left: 0;
 	background-repeat: no-repeat;
@@ -59,6 +57,7 @@ img {
 	top: 0;
 	background-repeat: no-repeat;
 	height: 100svh;
+	width: 100%;
 	z-index: -1;
 }
 
@@ -72,8 +71,6 @@ img {
 	width: 370%;
 	height: 30%;
 	transform: translateX(-59%);
-	background-repeat: no-repeat;
-	object-fit: fill;
 }
 
 main {
@@ -83,7 +80,6 @@ main {
 	gap: 4rem;
 	min-width: 340px;
 	transform: translateY(-60%);
-	border: 2px solid yellow;
 }
 
 header {
