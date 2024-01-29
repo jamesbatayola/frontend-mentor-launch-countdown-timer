@@ -12,11 +12,14 @@
 
 body {
 	display: grid;
-	min-height: 100svh;
+	min-height: 100vh;
 	place-items: center;
 	background: linear-gradient(var(--Very-very-dark-blue), var(--purply));
 	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 	position: relative;
+	pointer-events: auto;
 }
 
 img {
@@ -41,9 +44,10 @@ img {
 	--purply-v2: #352744;
 }
 
-.background {
+/* .background {
+	border: 2px solid lime;
+	min-height: 100%;
 	width: 100%;
-	height: 100%;
 	overflow-x: hidden;
 	position: relative;
 	position: absolute;
@@ -51,15 +55,15 @@ img {
 	left: 0;
 	background-repeat: no-repeat;
 	pointer-events: none;
-}
+} */
 
 .stars {
-	position: absolute;
+	pointer-events: none;
 	top: 0;
-	background-repeat: no-repeat;
-	height: 100svh;
-	min-width: 340px;
-	z-index: -1;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
 }
 
 .stars path {
@@ -69,18 +73,19 @@ img {
 .hills {
 	position: absolute;
 	bottom: 0;
-	width: 370%;
-	height: 30%;
-	transform: translateX(-59%);
+	width: 100%;
+	height: 25%;
+	z-index: 2;
 }
 
 main {
 	display: grid;
 	width: 85%;
 	max-width: 700px;
-	gap: 4rem;
 	min-width: 340px;
-	transform: translateY(-60%);
+	gap: 4rem;
+	margin-bottom: 15rem;
+	margin-top: 2rem;
 }
 
 header {
@@ -133,6 +138,7 @@ p {
 }
 
 footer {
+	z-index: 5;
 	position: absolute;
 	display: flex;
 	gap: 2.2rem;
@@ -228,6 +234,8 @@ footer svg:hover path {
 	main {
 		gap: 6rem;
 		transform: translateY(-50%);
+		margin-bottom: 0;
+		margin-top: 0;
 	}
 	.boxes-container {
 		gap: 1.5rem;
