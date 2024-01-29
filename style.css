@@ -44,19 +44,6 @@ img {
 	--purply-v2: #352744;
 }
 
-/* .background {
-	border: 2px solid lime;
-	min-height: 100%;
-	width: 100%;
-	overflow-x: hidden;
-	position: relative;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-repeat: no-repeat;
-	pointer-events: none;
-} */
-
 .stars {
 	pointer-events: none;
 	top: 0;
@@ -217,7 +204,7 @@ footer svg:hover path {
 
 .number {
 	position: absolute;
-	font-size: clamp(2rem, 7vw, 6rem);
+	font-size: clamp(2rem, 10vw, 5.5rem);
 	top: 50%;
 	left: 52%;
 	transform: translateX(-50%) translateY(-50%);
