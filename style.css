@@ -19,11 +19,11 @@ body {
 	position: relative;
 }
 
-/* img {
+img {
 	display: block;
 	width: auto;
 	height: auto;
-} */
+}
 
 :root {
 	/* Primary */
@@ -58,7 +58,7 @@ body {
 	top: 0;
 	background-repeat: no-repeat;
 	height: 100svh;
-	width: 100%;
+	min-width: 340px;
 	z-index: -1;
 }
 
@@ -227,7 +227,7 @@ footer svg:hover path {
 @media (min-width: 986px) {
 	main {
 		gap: 6rem;
-		transform: translateY(-60%);
+		transform: translateY(-50%);
 	}
 	.boxes-container {
 		gap: 1.5rem;
